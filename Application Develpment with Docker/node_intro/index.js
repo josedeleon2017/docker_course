@@ -18,7 +18,7 @@ app.get('/:name?', (req, res) => {
 
   if (req.xhr) {
 
-    // JSON response (HTTP header "X-Requested-With: XMLHttpRequest")
+    // JSON response when HTTP "X-Requested-With" header set to "XMLHttpRequest"
     res
       .set('Access-Control-Allow-Origin', '*')
       .json({ message });
